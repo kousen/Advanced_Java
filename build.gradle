@@ -1,0 +1,26 @@
+group 'com.kousenit'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'application'
+
+mainClassName = 'database.initialize_database'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.6'
+    compile 'javax.json:javax.json-api:1.0'
+
+    compile 'org.hibernate:hibernate-entitymanager:4.3.11.Final'
+
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+    testCompile 'junit:junit:1.12'
+
+    runtime 'org.glassfish:javax.json:1.0.4'
+    runtime 'mysql:mysql-connector-java:5.1.38'
+}
