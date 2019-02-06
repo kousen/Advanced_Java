@@ -22,5 +22,5 @@ dependencies {
     testCompile 'junit:junit:1.12'
 
     runtime 'org.glassfish:javax.json:1.0.4'
-    runtime 'mysql:mysql-connector-java:5.1.38'
+    runtime 'mysql:mysql-connector-java:8.0.15'
 }
