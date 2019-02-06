@@ -4,7 +4,8 @@ import database.jdbc.Person
 import groovy.sql.Sql
 
 Sql db = Sql.newInstance(
-        url: 'jdbc:mysql://localhost:3306/hr', driver: 'com.mysql.jdbc.Driver',
+        url: 'jdbc:mysql://localhost:3306/hr?sslMode=DISABLED', 
+        driver: 'com.mysql.cj.jdbc.Driver',
         user: 'jpa', password: 'java')
 
 db.execute "DROP TABLE IF EXISTS PEOPLE"
