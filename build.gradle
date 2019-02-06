@@ -21,6 +21,6 @@ dependencies {
     testCompile 'org.spockframework:spock-core:1.2-groovy-2.5'
     testCompile 'junit:junit:4.12'
 
-    runtime 'org.glassfish:javax.json:1.0.4'
+    runtime 'org.glassfish:javax.json:1.1.4'
     runtime 'mysql:mysql-connector-java:8.0.15'
 }
