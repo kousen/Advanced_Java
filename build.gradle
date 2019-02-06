@@ -18,7 +18,7 @@ dependencies {
 
     compile 'org.hibernate:hibernate-entitymanager:4.3.11.Final'
 
-    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+    testCompile 'org.spockframework:spock-core:1.2-groovy-2.5'
     testCompile 'junit:junit:4.12'
 
     runtime 'org.glassfish:javax.json:1.0.4'
