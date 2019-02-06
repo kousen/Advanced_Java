@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 
 public class Geocoder {
     private static final String BASE = "https://maps.googleapis.com/maps/api/geocode/json?";
+    private static final String KEY = "AIzaSyDw_d6dfxDEI7MAvqfGXEIsEMwjC1PWRno";
 
     private Function<String, String> encoder = s -> {
         try {
@@ -32,7 +33,7 @@ public class Geocoder {
         String encoded = encodeAddress(address);
         String response = "";
         try {
-            URL url = new URL(String.format("%saddress=%s", BASE, encoded));
+            URL url = new URL(String.format("%saddress=%s&key=%s", BASE, encoded, KEY));
             try (BufferedReader br = new BufferedReader(
                     new InputStreamReader(url.openStream()))) {
                 String line = "";
@@ -50,9 +51,9 @@ public class Geocoder {
         String encoded = encodeAddress(
                 Arrays.asList(location.getStreet(), location.getCity(), location.getState()));
         try {
-            URL url = new URL(String.format("%saddress=%s", BASE, encoded));
+            URL url = new URL(String.format("%saddress=%s&key=%s", BASE, encoded, KEY));
             try (InputStream is = url.openStream();
-                 JsonReader jr = Json.createReader(is)) {
+                JsonReader jr = Json.createReader(is)) {
                 JsonObject jo = jr.readObject();
                 JsonObject loc = jo.getJsonArray("results")
                         .getJsonObject(0)
