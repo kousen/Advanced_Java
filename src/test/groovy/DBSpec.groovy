@@ -6,7 +6,8 @@ class DBSpec extends Specification {
     void 'verify database exists'() {
         given:
         Sql db = Sql.newInstance(
-                url: 'jdbc:mysql://localhost:3306/hr', driver: 'com.mysql.jdbc.Driver',
+                url: 'jdbc:mysql://localhost:3306/hr?sslMode=DISABLED', 
+                driver: 'com.mysql.cj.jdbc.Driver',
                 user: 'jpa', password: 'java')
 
         expect:
