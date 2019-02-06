@@ -19,7 +19,7 @@ dependencies {
     compile 'org.hibernate:hibernate-entitymanager:4.3.11.Final'
 
     testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
-    testCompile 'junit:junit:1.12'
+    testCompile 'junit:junit:4.12'
 
     runtime 'org.glassfish:javax.json:1.0.4'
     runtime 'mysql:mysql-connector-java:8.0.15'
