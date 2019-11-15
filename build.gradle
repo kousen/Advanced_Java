@@ -16,7 +16,7 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.5.8'
     compile 'javax.json:javax.json-api:1.1.4'
 
-    compile 'org.hibernate:hibernate-entitymanager:5.4.8.Final'
+    compile 'org.hibernate:hibernate-entitymanager:5.4.9.Final'
 
     testCompile 'org.spockframework:spock-core:1.2-groovy-2.5'
     testCompile 'junit:junit:4.12'
